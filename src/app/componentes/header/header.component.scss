@@ -1,0 +1,38 @@
+@import "colors";
+
+.header {
+  width: 600px;
+  //   width: 100%;
+  border: 3px solid $header-outline;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+
+  &__result {
+    background-color: $white;
+    height: 100px;
+    width: 120px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0px;
+    color: $score-text;
+    font-size: 16px;
+  }
+
+  &__count {
+    font-size: 60px;
+    line-height: 1;
+    font-weight: 700;
+    color: $dark-text;
+  }
+}
