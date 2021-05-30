@@ -1,3 +1,61 @@
-p {
-  margin: 0;
+.home {
+  &__content {
+    position: relative;
+  }
+
+  &__line {
+    width: 300px;
+    height: 15px;
+    position: absolute;
+    background-color: rgba($color: #000000, $alpha: 0.3);
+    top: 100px;
+    left: calc(50% - 150px);
+
+    &::before {
+      content: "";
+      height: 15px;
+      background-color: rgba($color: #000000, $alpha: 0.3);
+      position: absolute;
+      left: 0px;
+      right: 0px;
+      top: 0px;
+      transform: rotate(60deg);
+      transform-origin: left top;
+    }
+
+    &::after {
+      content: "";
+      height: 15px;
+      background-color: rgba($color: #000000, $alpha: 0.3);
+      position: absolute;
+      left: 0px;
+      right: 0px;
+      top: 0px;
+      transform: rotate(-60deg);
+      transform-origin: right top;
+    }
+  }
+
+  &__items {
+    margin-top: 70px;
+    display: grid;
+    max-width: 650px;
+    column-gap: 70px;
+    row-gap: 40px;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+
+    .scissors {
+      justify-self: end;
+    }
+
+    .rock {
+      justify-self: start;
+    }
+
+    .paper {
+      grid-column: 1/3;
+      justify-self: center;
+    }
+  }
 }

@@ -1,1 +1,17 @@
-<p>home works!</p>
+<div class="home">
+  <app-header></app-header>
+  <div class="home__content">
+    <div class="home__line"></div>
+    <div class="home__items">
+      <div class="scissors">
+        <app-item [type]="'scissors'"></app-item>
+      </div>
+      <div class="rock">
+        <app-item [type]="'rock'"></app-item>
+      </div>
+      <div class="paper">
+        <app-item [type]="'paper'"></app-item>
+      </div>
+    </div>
+  </div>
+</div>
