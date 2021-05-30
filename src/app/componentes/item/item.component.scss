@@ -1,0 +1,44 @@
+@import "colors";
+
+.item {
+  height: 200px;
+  width: 200px;
+  padding: 25px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &__content {
+    background-color: $white;
+    border-radius: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px -6px 0px 1px #d0d0d0;
+    user-select: none;
+  }
+
+  &.scissor {
+    background: linear-gradient(180deg, #ffbb34 0%, #ec9e0e 100%);
+    box-shadow: 0px 6px 0px 1px #9a6400;
+  }
+
+  &.rock {
+    background: linear-gradient(
+      180deg,
+      hsl(349, 70%, 56%) 0%,
+      hsl(349, 71%, 52%) 100%
+    );
+    box-shadow: 0px 6px 0px 1px #90001a;
+  }
+
+  &.paper {
+    background: linear-gradient(
+      180deg,
+      hsl(230, 89%, 65%) 0%,
+      hsl(230, 89%, 62%) 100%
+    );
+    box-shadow: 0px 6px 0px 1px #071c84;
+  }
+}
