@@ -3,20 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
-import { HeaderComponent } from './componentes/header/header.component';
-import { ItemComponent } from './componentes/item/item.component';
+import { HeaderComponent } from './components/header/header.component';
+import { ItemComponent } from './components/item/item.component';
+import { PlayGroundComponent } from './components/play-ground/play-ground.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    ItemComponent
+    ItemComponent,
+    PlayGroundComponent,
   ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
