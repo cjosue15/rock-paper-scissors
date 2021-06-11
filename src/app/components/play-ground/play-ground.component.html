@@ -1,0 +1,21 @@
+<div class="play">
+  <div class="play__you">
+    <h3>YOU PICKED</h3>
+    <app-item [hasShadow]="result === resultsEnum.win" [type]="type"></app-item>
+  </div>
+  <div class="play__result" *ngIf="result">
+    <h2>{{ result }}</h2>
+    <button (click)="playAgain()">PLAY AGAIN</button>
+  </div>
+  <div class="play__house">
+    <h3>THE HOSUE PICKED</h3>
+    <app-item
+      [type]="pickedHouse"
+      [hasShadow]="result === resultsEnum.defeat"
+      *ngIf="pickedHouse; else elseTemplate"
+    ></app-item>
+    <ng-template #elseTemplate>
+      <p style="background-color: gren">ga</p>
+    </ng-template>
+  </div>
+</div>

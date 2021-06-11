@@ -1,0 +1,37 @@
+@import "colors";
+
+.play {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-top: 50px;
+  h3 {
+    color: $white;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  &__result {
+    h2 {
+      color: $white;
+      font-size: 40px;
+      margin-top: 0;
+      text-transform: uppercase;
+    }
+
+    button {
+      width: 100%;
+      text-align: center;
+      height: 40px;
+      border-radius: 5px;
+      border: none;
+      color: #dc3352;
+      font-weight: 700;
+      font-size: 16px;
+      cursor: pointer;
+      font-family: "Barlow Semi Condensed", sans-serif;
+    }
+  }
+}
