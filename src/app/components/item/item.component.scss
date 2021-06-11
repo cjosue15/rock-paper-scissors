@@ -1,5 +1,29 @@
 @import "colors";
 
+.shadow {
+  border-radius: 50%;
+  animation: shadow 1s ease 0s 1 normal forwards running;
+
+  img {
+    animation: selected 1s ease 0s 1 normal none running;
+  }
+}
+
+@keyframes shadow {
+  100% {
+    transform: scale(1.1);
+    box-shadow: 0 5px 0 45px rgb(255 255 255 / 5%),
+      0px 5px 0 90px rgb(255 255 255 / 3%),
+      0px 5px 0 145px rgb(255 255 255 / 2%);
+  }
+}
+
+@keyframes selected {
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
 .item {
   height: 200px;
   width: 200px;
