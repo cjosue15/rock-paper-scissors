@@ -1,17 +1,23 @@
 <div class="home">
   <app-header></app-header>
-  <div class="home__content">
+  <div class="home__content" *ngIf="!title">
     <div class="home__line"></div>
     <div class="home__items">
       <div class="scissors">
-        <app-item [type]="'scissors'"></app-item>
+        <app-item
+          (chooseItem)="chooseItem($event)"
+          [type]="'scissors'"
+        ></app-item>
       </div>
       <div class="rock">
-        <app-item [type]="'rock'"></app-item>
+        <app-item (chooseItem)="chooseItem($event)" [type]="'rock'"></app-item>
       </div>
       <div class="paper">
-        <app-item [type]="'paper'"></app-item>
+        <app-item (chooseItem)="chooseItem($event)" [type]="'paper'"></app-item>
       </div>
     </div>
   </div>
+  <ng-container *ngIf="title">
+    <app-play-ground></app-play-ground>
+  </ng-container>
 </div>
