@@ -9,8 +9,10 @@ import { TypeItem } from '../../models/type';
 })
 export class HomeComponent implements OnInit {
   title: string | null;
+  show: boolean;
   constructor(private playService: PlayService) {
     this.title = '';
+    this.show = false;
   }
 
   ngOnInit(): void {
@@ -21,5 +23,9 @@ export class HomeComponent implements OnInit {
 
   chooseItem(event: TypeItem): void {
     this.playService.changePlayObservable = event;
+  }
+
+  openModal(): void {
+    this.show = true;
   }
 }

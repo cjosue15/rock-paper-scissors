@@ -1,5 +1,7 @@
 <div class="home">
-  <app-header></app-header>
+  <div class="home__header">
+    <app-header></app-header>
+  </div>
   <div class="home__content" *ngIf="!title">
     <div class="home__line"></div>
     <div class="home__items">
@@ -20,4 +22,9 @@
   <ng-container *ngIf="title">
     <app-play-ground></app-play-ground>
   </ng-container>
+  <div class="home__footer">
+    <button (click)="openModal()">RULES</button>
+  </div>
 </div>
+
+<app-modal [show]="show" (onModalClose)="show = $event"></app-modal>

@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  OnInit,
+  Renderer2,
+  ViewChild,
+} from '@angular/core';
 import { combineLatest } from 'rxjs';
 import { first } from 'rxjs/operators';
 import { PlayService } from '../../core/services/play.service';
@@ -16,10 +22,12 @@ export class PlayGroundComponent implements OnInit {
   result: string;
   counter: number;
   resultsEnum: typeof Results = Results;
-  constructor(private playService: PlayService) {
+  @ViewChild('playGround') playGround: ElementRef;
+  constructor(private playService: PlayService, private render: Renderer2) {
     this.pickedHouse = null;
     this.result = '';
     this.counter = 0;
+    this.playGround = {} as any;
   }
 
   ngOnInit(): void {
@@ -36,6 +44,7 @@ export class PlayGroundComponent implements OnInit {
     try {
       await this.launchHousePicked();
       this.result = this.getResult(this.type, this.pickedHouse);
+      this.render.addClass(this.playGround.nativeElement, 'with-results');
       if (this.result === Results.win) {
         this.playService.changeCounter = this.counter + 1;
       }

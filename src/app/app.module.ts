@@ -6,6 +6,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ItemComponent } from './components/item/item.component';
 import { PlayGroundComponent } from './components/play-ground/play-ground.component';
+import { ModalModule } from './components/modal/modal.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import { PlayGroundComponent } from './components/play-ground/play-ground.compon
     ItemComponent,
     PlayGroundComponent,
   ],
-  imports: [BrowserModule],
+  imports: [BrowserModule, ModalModule],
   providers: [],
   bootstrap: [AppComponent],
 })
