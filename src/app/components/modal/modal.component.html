@@ -1,0 +1,13 @@
+<div class="modal" *ngIf="show" [@fadeBack]>
+  <div class="modal__content" [@fadeContent]>
+    <div class="modal__header">
+      <h2 class="modal__title">RULES</h2>
+      <i (click)="close()"
+        ><img src="assets/images/icon-close.svg" alt="Close"
+      /></i>
+    </div>
+    <div class="modal__body">
+      <img src="assets/images/image-rules.svg" alt="Rules" />
+    </div>
+  </div>
+</div>
