@@ -69,14 +69,11 @@ export class PlayGroundComponent implements OnInit {
 
   launchHousePicked(): Promise<TypeItem> {
     return new Promise((resolve, reject) => {
-      let picked: TypeItem;
       const interval = setInterval(() => {
-        picked = this.types[this.getRandomInt(0, 3)];
-        this.pickedHouse = picked;
+        this.pickedHouse = this.types[this.getRandomInt(0, 3)];
       }, 75);
 
       setTimeout(() => {
-        this.pickedHouse = picked;
         resolve(this.pickedHouse);
         clearInterval(interval);
       }, 2000);
